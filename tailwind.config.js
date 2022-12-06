@@ -11,7 +11,11 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "herro-img": "url('/src/assets/herro-img.jpg')",
+        "herro-img-rotate": "url('/src/assets/istockphoto.jpg')",
       }),
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   plugins: [],
