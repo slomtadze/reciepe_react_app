@@ -11,7 +11,7 @@ const MenuItem = ({ text }) => {
   };
   return (
     <li
-      className="relative text-white/80 hover:text-white duration-300 cursor-pointer mr-4"
+      className="relative text-white hover:text-white/80 duration-300 cursor-pointer mr-4 font-bold"
       onMouseEnter={showNoteHandler}
       onMouseLeave={hideNoteHandler}
     >
