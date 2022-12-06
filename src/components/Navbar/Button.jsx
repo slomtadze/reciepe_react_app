@@ -10,7 +10,7 @@ const Button = ({ icon, note }) => {
   };
   return (
     <button
-      className="relative hover:text-white transition duration-300"
+      className="relative hover:text-white/80 transition duration-300"
       onMouseEnter={showNoteHandler}
       onMouseLeave={hideNoteHandler}
     >

@@ -8,7 +8,11 @@ module.exports = {
       lg: { max: "976px" },
       xl: { max: "1440px" },
     },
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        "herro-img": "url('/src/assets/herro-img.jpg')",
+      }),
+    },
   },
   plugins: [],
 };
