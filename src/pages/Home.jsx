@@ -6,12 +6,14 @@ import axios from "axios";
 
 const Home = () => {
   console.log(getRndmNumbers(100, 3));
+  console.log(process.env.REACT_APP_API_KEY);
+
   /* useEffect(() => {
     const options = {
       method: "GET",
       url: "https://tasty.p.rapidapi.com/tags/list",
       headers: {
-        "X-RapidAPI-Key": "b734d6112dmshdde1c05c35e21b1p169d69jsn94b6de653a1a",
+        "X-RapidAPI-Key": {process.env.REACT_APP_API_KEY},
         "X-RapidAPI-Host": "tasty.p.rapidapi.com",
       },
     };
