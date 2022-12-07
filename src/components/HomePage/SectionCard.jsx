@@ -1,9 +1,7 @@
-
-
-const SectionCard = ({img, title, name}) => {
+const SectionCard = ({ img, title, name }) => {
   return (
-    <div className="flex flex-col items-center bg-white w-1/3 p-4 m-1 rounded">
-      <img src={img} alt="appetaizers" className="h-52 w-52 rounded-full" />
+    <div className="flex flex-col items-center bg-white p-4 rounded">
+      <img src={img} alt="appetaizers" className="h-auto w-1/3 rounded-full" />
       <div className="flex flex-col items-center py-4 ">
         <h2 className="text-2xl font-mono font-bold text-black/70 italic mb-2">
           {title}
