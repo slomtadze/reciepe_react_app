@@ -22,10 +22,11 @@ const Home = () => {
         const set = new Set();
         const tempArr = [];
         response.data.results.forEach((item) => {
-          set.add(item.type);
+          set.add(item.name);
         });
         const array = Array.from(set);
         console.log(array);
+        //console.log(response.data);
       })
       .catch(function (error) {
         console.error(error);
