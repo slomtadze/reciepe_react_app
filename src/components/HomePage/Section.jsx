@@ -12,7 +12,7 @@ const Section = React.memo(({ urlPath, params }) => {
       <h1 className="text-4xl mb-12 font-mono font-bold tracking-wider italic ">
         {params.tags.toUpperCase()}
       </h1>
-      <div className="w-[90%] flex justify-around">
+      <div className="w-[90%] grid grid-cols-5 lg:grid-cols-3 gap-4">
         {isLoading
           ? console.log(isLoading)
           : recipes.results.map((recipe) => (
