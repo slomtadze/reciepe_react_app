@@ -5,7 +5,7 @@ import Sign from "./Sign";
 
 const Navbar = () => {
   return (
-    <div className="w-screen h-[50px] bg-black/70 text-white flex items-center justify-between px-12 py-8 absolute z-10 top-0 left-0 ">
+    <div className="w-full h-[50px] bg-black/70 text-white flex items-center justify-between px-12 py-8 absolute z-10 top-0 left-0 ">
       <div>
         <Logo />
       </div>

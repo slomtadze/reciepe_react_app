@@ -4,12 +4,12 @@ import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home";
 function App() {
   return (
-    <Fragment>
+    <div className="w-full overflow-hidden">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </Fragment>
+    </div>
   );
 }
 

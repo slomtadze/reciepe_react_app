@@ -8,7 +8,7 @@ const Section = React.memo(({ urlPath, params }) => {
   console.log(recipes);
 
   return (
-    <div className="w-screen flex flex-col items-center py-12 rounded bg-gray-100 overflow-x-auto">
+    <div className="w-full flex flex-col items-center py-12 rounded bg-gray-100">
       <h1 className="text-4xl mb-12 font-mono font-bold tracking-wider italic ">
         {params.tags.toUpperCase()}
       </h1>
