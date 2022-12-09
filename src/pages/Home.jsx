@@ -1,9 +1,6 @@
-import { Fragment, useEffect } from "react";
 import Header from "../components/HomePage/Header";
 import Section from "../components/HomePage/Section";
-import useHttp from "../hooks/use-Http";
-import { getRndmNumbers } from "../helpers/getRndmNumbers";
-import axios from "axios";
+import SectionLg from "../components/HomePage/SectionLg";
 
 const Home = () => {
   /* const options = {
@@ -31,6 +28,7 @@ const Home = () => {
         urlPath="recipes/list"
         params={{ from: "0", size: "5", tags: "appetizers" }}
       />
+      <SectionLg />
       <Section
         urlPath="recipes/list"
         params={{ from: "0", size: "5", tags: "under_30_minutes" }}

@@ -31,8 +31,8 @@ const SectionCard = ({ adress, title, id, description }) => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl m-1 w-[200px]">
-      <img src={adress} alt="appetaizers" className="h-24 w-24 rounded-full" />
+    <div className="flex flex-col items-center bg-gray-50 p-4 rounded-xl m-1 ">
+      <img src={adress} alt="appetaizers" className="h-32 w-32 rounded-full" />
       <div className="relative flex flex-col items-start h-32 py-2 ">
         <div className="h-1/2">
           <h2
