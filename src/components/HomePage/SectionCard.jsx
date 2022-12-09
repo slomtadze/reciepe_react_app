@@ -44,7 +44,7 @@ const SectionCard = ({ adress, title, id, description }) => {
           </h2>
         </div>
         {descriptionIsShown && (
-          <p className="absolute z-10 left-0 w-64 max-w-max top-1/2 px-4 py-2 rounded-lg border-2 border-gray-500 bg-slate-600 text-white text-[12px] ">
+          <p className="absolute z-10 left-0 w-64 max-w-max top-1/2 px-4 py-2 rounded-lg border-2 border-gray-500 bg-slate-600 text-white text-[10px] italic">
             {description.length > 0
               ? updateString(description, 150)
               : "No Description avialible"}

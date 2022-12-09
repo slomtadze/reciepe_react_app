@@ -31,6 +31,10 @@ const Home = () => {
         urlPath="recipes/list"
         params={{ from: "0", size: "5", tags: "appetizers" }}
       />
+      <Section
+        urlPath="recipes/list"
+        params={{ from: "0", size: "5", tags: "under_30_minutes" }}
+      />
     </div>
   );
 };
