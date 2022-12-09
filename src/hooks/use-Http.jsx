@@ -5,6 +5,7 @@ const useHttp = (urlPath, params) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
+
   const options = {
     method: "GET",
     url: `https://tasty.p.rapidapi.com/${urlPath}`,
@@ -18,6 +19,7 @@ const useHttp = (urlPath, params) => {
   const getData = async () => {
     try {
       const response = await axios.request(options);
+      console.log(response);
       setData(response.data);
       setIsLoading(false);
     } catch (error) {

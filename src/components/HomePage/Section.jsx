@@ -4,7 +4,7 @@ import useHttp from "../../hooks/use-Http";
 
 const Section = React.memo(({ urlPath, params }) => {
   const { data: recipes, isLoading, error } = useHttp(urlPath, params);
-  console.log(recipes.results, isLoading, error);
+  console.log(recipes);
 
   return (
     <div className="w-screen flex flex-col items-center py-12 rounded bg-gray-100 overflow-x-auto">
@@ -15,7 +15,13 @@ const Section = React.memo(({ urlPath, params }) => {
         {isLoading
           ? console.log(isLoading)
           : recipes.results.map((recipe) => (
-              <SectionCard title={recipe.name} name="lunch" />
+              <SectionCard
+                key={recipe.id}
+                adress={recipe.thumbnail_url}
+                title={recipe.name}
+                id={recipe.id}
+                description={recipe.description}
+              />
             ))}
       </div>
     </div>
