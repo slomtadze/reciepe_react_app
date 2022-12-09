@@ -1,6 +1,7 @@
 import React from "react";
 import SectionCard from "./SectionCard";
 import useHttp from "../../hooks/use-Http";
+import { getRndmNumbers } from "../../helpers/getRndmNumbers";
 
 const Section = React.memo(({ urlPath, params }) => {
   const { data: recipes, isLoading, error } = useHttp(urlPath, params);
@@ -8,8 +9,8 @@ const Section = React.memo(({ urlPath, params }) => {
 
   return (
     <div className="w-screen flex flex-col items-center py-12 rounded bg-gray-100 overflow-x-auto">
-      <h1 className="text-4xl mb-12 font-mono font-bold">
-        Some Header Content Here
+      <h1 className="text-4xl mb-12 font-mono font-bold tracking-wider italic ">
+        {params.tags.toUpperCase()}
       </h1>
       <div className="w-[90%] flex justify-around">
         {isLoading
