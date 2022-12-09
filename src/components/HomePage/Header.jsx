@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <div className="relative h-screen w-screen bg-herro-img bg-cover bg-center">
-      <div className="h-full w-full bg-black/30 z-5">
+    <div className="relative h-screen w-full bg-herro-img bg-cover bg-center m-0">
+      <div className="bg-black/30 z-5">
         <div className="flex absolute top-[30%] left-12 text-white text-2xl z-5">
           <div>
             <h1 className="text-4xl font-bold leading-relaxed uppercase font-mono mr-24">
