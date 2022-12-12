@@ -11,7 +11,10 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "herro-img": "url('/src/assets/herro-img.jpg')",
-        "herro-img-rotate": "url('/src/assets/istockphoto.jpg')",
+        "italian-img": "url('/src/assets/italian-cuisine.jpg')",
+        "hawai-img": "url('/src/assets/hawai-cuisine.jpg')",
+        "japanese-img": "url('/src/assets/japanese-cuisine.jpg')",
+        "mexican-img": "url('/src/assets/mexican-food.jpg')",
       }),
       animation: {
         "spin-slow": "spin 3s linear infinite",
