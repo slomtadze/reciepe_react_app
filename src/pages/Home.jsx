@@ -1,6 +1,7 @@
 import Header from "../components/HomePage/Header";
 import Section from "../components/HomePage/Section";
 import SectionLg from "../components/HomePage/SectionLg";
+import SectionList from "../components/HomePage/SectionList";
 
 const Home = () => {
   /* const options = {
@@ -26,12 +27,15 @@ const Home = () => {
       <Header />
       <Section
         urlPath="recipes/list"
-        params={{ from: "0", size: "5", tags: "appetizers" }}
+        params={{ from: "0", size: "5", tags: "best_of_tasty" }}
+        header="Best Of Tasty"
       />
+      <SectionList />
       <SectionLg />
       <Section
         urlPath="recipes/list"
         params={{ from: "0", size: "5", tags: "under_30_minutes" }}
+        header="Under 30 Minutes"
       />
     </div>
   );
