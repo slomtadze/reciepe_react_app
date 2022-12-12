@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 const SectionCard = ({ adress, title, id, description }) => {
   const [descriptionIsShown, setDescriptionIsShown] = useState(false);
 
-  const showDescritioon = () => {
+  const showDescription = () => {
     setTimeout(() => {
       setDescriptionIsShown(true);
     }, 500);
   };
 
-  const hideDescrition = () => {
+  const hideDescription = () => {
     setTimeout(() => {
       setDescriptionIsShown(false);
     }, 500);
@@ -35,8 +35,8 @@ const SectionCard = ({ adress, title, id, description }) => {
       <img src={adress} alt="appetaizers" className="h-48 w-48 rounded-full " />
       <div className="relative flex flex-col items-start h-20 py-2 ">
         <h2
-          onMouseEnter={showDescritioon}
-          onMouseLeave={hideDescrition}
+          onMouseEnter={showDescription}
+          onMouseLeave={hideDescription}
           className="text-md font-mono font-bold text-black/70 italic mb-1"
         >
           {updateString(title, 41)}
