@@ -27,9 +27,12 @@ const SectionLg = () => {
           </div>
         </div>
         <div className="w-full grid grid-rows-3 gap-4">
-          <SectionLgCard imgUrl="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/414312.jpg" />
-          <SectionLgCard imgUrl="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/414312.jpg" />
-          <SectionLgCard imgUrl="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/414312.jpg" />
+          <SectionLgCard
+            img="japanese-img"
+            title="Best Rated Japanese Recipes"
+          />
+          <SectionLgCard img="mexican-img" />
+          <SectionLgCard img="hawai-img" />
         </div>
       </div>
     </SectionWrapper>
@@ -37,3 +40,7 @@ const SectionLg = () => {
 };
 
 export default SectionLg;
+/* 
+ "hawai-img": "url('/src/assets/hawai-cuisine.jpg')",
+        "japanese-img": "url('/src/assets/japanese-cuisine.jpg')",
+        "mexican-img": "url('/src/assets/mexican-food.jpg')", */

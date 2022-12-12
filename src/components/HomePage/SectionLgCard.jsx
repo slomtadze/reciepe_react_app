@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SectionLgCard = ({ imgUrl }) => {
+const SectionLgCard = ({ img, title }) => {
   const [descriptionIsShown, setDescriptionIsShown] = useState(false);
 
   const showDescription = () => {
@@ -14,23 +14,18 @@ const SectionLgCard = ({ imgUrl }) => {
       setDescriptionIsShown(false);
     }, 500);
   };
-  const bgImg = imgUrl;
 
-  const backgroundIMG = {
-    backgroundImage: `url("${bgImg}")`,
-    backgroundSize: "cover",
-    backgroundPositioc: "center",
-  };
+  const stl = `h-[150px] mb-2 bg-${img} bg-cover bg-center`;
 
   return (
     <div className="px-4">
-      <div style={backgroundIMG} className="h-[150px] mb-2"></div>
+      <div className={stl}></div>
       <p
-        className="relative text-lg font-bold"
+        className="relative text-gray-500 text-lg italic font-bold hover:text-gray-800 cursor-pointer duration-300"
         onMouseEnter={showDescription}
         onMouseLeave={hideDescription}
       >
-        Some content Text here
+        {title}
         {descriptionIsShown && (
           <span className="absolute z-10 left-0 w-64 max-w-max top-full  px-4 py-2 rounded-lg border-2 border-gray-500 bg-slate-600 text-white text-[10px] italic ">
             some desctioption here
