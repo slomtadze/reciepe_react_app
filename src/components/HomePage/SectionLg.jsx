@@ -30,9 +30,18 @@ const SectionLg = () => {
           <SectionLgCard
             img="japanese-img"
             title="Best Rated Japanese Recipes"
+            description="he traditional cuisine of Japan (Japanese: washoku) is based on rice with miso soup and other dishes; there is an emphasis on seasonal ingredients. Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth."
           />
-          <SectionLgCard img="mexican-img" />
-          <SectionLgCard img="hawai-img" />
+          <SectionLgCard
+            img="mexican-img"
+            title="Most Cooked Mexican Recipes"
+            description="Today Mexican Cuisine is a nice blend of the indigenous and Spanish cuisine. It is still based in beans, corn, tortillas, and chile peppers, but these are now usually served with some sort of meat and cheese. Most dishes come with some sort of rice and spices as well, a clear nod to the European influence"
+          />
+          <SectionLgCard
+            img="hawai-img"
+            title="Hawaian Recipes to cook at Home"
+            description="Traditional Hawaiian cuisine predominantly features vegetables and fruits grown on the volcanic island including sweet potatoes, yams, taro, coconuts and pineapples. Fresh fish is also prolific as are meats such as pork and chicken"
+          />
         </div>
       </div>
     </SectionWrapper>
