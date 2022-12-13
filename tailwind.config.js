@@ -15,6 +15,7 @@ module.exports = {
         "hawai-img": "url('/src/assets/hawai-cuisine.jpg')",
         "japanese-img": "url('/src/assets/japanese-cuisine.jpg')",
         "mexican-img": "url('/src/assets/mexican-food.jpg')",
+        "christmas-img": "url('/src/assets/christmas.jpg')",
       }),
       animation: {
         "spin-slow": "spin 3s linear infinite",
