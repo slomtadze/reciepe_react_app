@@ -1,7 +1,7 @@
 import React from "react";
 
 const SectionListCard = () => {
-  return <div>SectionListCard</div>;
+  return <div className="h-[150px]">SectionListCard</div>;
 };
 
 export default SectionListCard;
