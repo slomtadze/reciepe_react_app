@@ -16,7 +16,12 @@ const SectionList = () => {
         <div className="grid grid-rows-7 gap-4 overflow-y-scroll h-[450px] scrollbar-hide">
           {data &&
             data.results.map((recipe) => (
-              <SectionListCard key={recipe.id} img={recipe.thumbnail_url} />
+              <SectionListCard
+                key={recipe.id}
+                img={recipe.thumbnail_url}
+                description={recipe.description}
+                title={recipe.name}
+              />
             ))}
         </div>
         <div className="relative h-[450px] bg-christmas-img bg-cover bg-center">
