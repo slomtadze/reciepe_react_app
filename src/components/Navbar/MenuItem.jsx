@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { tagsList } from "../../assets/tags_list";
 
-const MenuItem = ({ text }) => {
+const MenuItem = ({ text, type }) => {
   const [noteIsShown, setNoteIsShown] = useState(false);
+  const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    const list = tagsList.results.filter((tag) => {
+      if (tag.type === type) {
+        return tag;
+      }
+    });
+
+    setTags(list.splice(0, 10));
+  }, [type]);
 
   const showNoteHandler = () => {
     setNoteIsShown(true);
@@ -23,9 +35,11 @@ const MenuItem = ({ text }) => {
           onMouseLeave={hideNoteHandler}
         >
           <ul className="list-none text-black bg-gray-400 rounded border-2 pl-1 pr-4">
-            <li className="my-1">test</li>
-            <li className="my-1">test</li>
-            <li className="my-1">test</li>
+            {tags.map((tag) => (
+              <li className="my-1" key={tag.id}>
+                {tag.display_name}
+              </li>
+            ))}
           </ul>
         </div>
       )}
