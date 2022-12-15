@@ -15,7 +15,7 @@ const SectionLgCard = ({ img, title, description }) => {
     }, 500);
   };
 
-  const stl = `h-[150px] mb-2 bg-${img} bg-cover bg-center`;
+  const stl = `h-[150px] mb-2 ${img} bg-cover bg-center`;
 
   return (
     <div className="px-4">

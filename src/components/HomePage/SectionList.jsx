@@ -1,19 +1,23 @@
 import React from "react";
+import useHttp from "../../hooks/use-Http";
 import SectionWrapper from "../../Layout/SectionWrapper";
 import SectionListCard from "./SectionListCard";
 
 const SectionList = () => {
+  const { data, error, isLoading } = useHttp("recipes/list", {
+    from: "0",
+    size: "8",
+    tags: "christmas",
+  });
+
   return (
     <SectionWrapper title="Christmas">
       <div className="grid grid-cols-2 gap-4">
         <div className="grid grid-rows-7 gap-4 overflow-y-scroll h-[450px] scrollbar-hide">
-          <SectionListCard />
-          <SectionListCard />
-          <SectionListCard />
-          <SectionListCard />
-          <SectionListCard />
-          <SectionListCard />
-          <SectionListCard />
+          {data &&
+            data.results.map((recipe) => (
+              <SectionListCard key={recipe.id} img={recipe.thumbnail_url} />
+            ))}
         </div>
         <div className="relative h-[450px] bg-christmas-img bg-cover bg-center">
           <div className="absolute w-full h-full left-0 top-0 bg-black/30 hover:bg-black/50 duration-300 text-white flex justify-start items-end pb-16 pl-12">
