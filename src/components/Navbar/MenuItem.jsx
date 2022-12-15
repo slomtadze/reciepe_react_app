@@ -27,19 +27,25 @@ const MenuItem = ({ text, type }) => {
       onMouseEnter={showNoteHandler}
       onMouseLeave={hideNoteHandler}
     >
-      {text}
+      {text.toUpperCase()}
       {noteIsShown && (
         <div
-          className="absolute py-4 pl-1 pr-4"
+          className="absolute w-40"
           onMouseEnter={showNoteHandler}
           onMouseLeave={hideNoteHandler}
         >
-          <ul className="list-none text-black bg-gray-400 rounded border-2 pl-1 pr-4">
+          <ul className="list-none text-white bg-black/80 pl-2 pr-4 py-4">
             {tags.map((tag) => (
-              <li className="my-1" key={tag.id}>
+              <li
+                className="my-1 italic text-sm hover:text-white/80 cursor-pointer duration-300"
+                key={tag.id}
+              >
                 {tag.display_name}
               </li>
             ))}
+            <li className="italic text-sm text-white/60 hover:text-white/80 cursor-pointer">
+              More...
+            </li>
           </ul>
         </div>
       )}
