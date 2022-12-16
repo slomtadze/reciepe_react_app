@@ -13,12 +13,12 @@ const Home = () => {
         header="Best Of Tasty"
       /> */}
       <SectionList />
-      <SectionLg />
       {/* <Section
         urlPath="recipes/list"
         params={{ from: "0", size: "5", tags: "under_30_minutes" }}
         header="Under 30 Minutes"
       /> */}
+      <SectionLg />
     </div>
   );
 };
