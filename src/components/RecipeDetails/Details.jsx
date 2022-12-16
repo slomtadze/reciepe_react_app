@@ -1,13 +1,15 @@
+import img from "../../assets/christmas.jpg";
+
 const Details = () => {
   return (
     <div>
       <div>
-        <img />
+        <img src={img} className="w-2/3 h-auto" />
       </div>
-      <div>
-        <img />
-        <img />
-        <img />
+      <div className="flex my-4">
+        <img src={img} className="w-1/6 h-auto mr-2" />
+        <img src={img} className="w-1/6 h-auto mr-2" />
+        <img src={img} className="w-1/6 h-auto mr-2" />
       </div>
       <div>
         <div>
