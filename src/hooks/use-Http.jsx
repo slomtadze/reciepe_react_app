@@ -23,6 +23,7 @@ const useHttp = (urlPath, params) => {
       setData(response.data);
       setIsLoading(false);
     } catch (error) {
+      console.log(error);
       if (error.response) {
         // Request made but the server responded with an error
         setError(error.message);
