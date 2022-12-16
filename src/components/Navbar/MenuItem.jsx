@@ -28,7 +28,7 @@ const MenuItem = ({ text, type }) => {
       className="relative text-white hover:text-white/80 duration-300 cursor-pointer mr-4 font-bold"
       onMouseEnter={showNoteHandler}
       onMouseLeave={hideNoteHandler}
-      onClick={() => navigate("/list")}
+      onClick={() => navigate(`/list/${text}`)}
     >
       {text.toUpperCase()}
       {noteIsShown && (
