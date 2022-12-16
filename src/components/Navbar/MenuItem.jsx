@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { tagsList } from "../../assets/tags_list";
 
 const MenuItem = ({ text, type }) => {
   const [noteIsShown, setNoteIsShown] = useState(false);
   const [tags, setTags] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const list = tagsList.results.filter((tag) => {
@@ -26,6 +28,7 @@ const MenuItem = ({ text, type }) => {
       className="relative text-white hover:text-white/80 duration-300 cursor-pointer mr-4 font-bold"
       onMouseEnter={showNoteHandler}
       onMouseLeave={hideNoteHandler}
+      onClick={() => navigate("/list")}
     >
       {text.toUpperCase()}
       {noteIsShown && (
