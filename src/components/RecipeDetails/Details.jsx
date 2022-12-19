@@ -2,7 +2,7 @@ import img from "../../assets/christmas.jpg";
 
 const Details = () => {
   return (
-    <div className="w-2/3 rounded">
+    <div className="rounded">
       <div>
         <img src={img} className="w-full h-auto" />
       </div>
@@ -12,7 +12,7 @@ const Details = () => {
         <img src={img} className="w-1/6 h-auto mr-2" />
       </div>
       <div className="bg-gray-200 w-full px-8 py-4">
-        <div className="border-b-2 border-gray-400 pb-4 grid grid-cols-4 gap-4">
+        <div className="border-b-2 border-gray-400 pb-4 grid grid-cols-4 gap-4 min-w-min">
           <div className="">
             <h1 className="font-bold mb-2">Prep Time:</h1>
             <h3>10 mins</h3>

@@ -12,12 +12,14 @@ const RecipeDetails = () => {
   return (
     <PageWrapper>
       <div className="px-64 bg-white py-8">
-        {/*Header */}
-        <Header />
-        <Details />
-        <Ingredients />
-        <Directions />
-        <Reviews />
+        <div className="w-2/3">
+          {/*Header */}
+          <Header />
+          <Details />
+          <Ingredients />
+          <Directions />
+          <Reviews />
+        </div>
       </div>
     </PageWrapper>
   );
