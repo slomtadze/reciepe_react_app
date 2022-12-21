@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { updateString } from "../../helpers/updateString";
+import { updateString } from "../helpers/updateString";
 
 const SectionListCard = ({ img, description, title }) => {
   const navigate = useNavigate();

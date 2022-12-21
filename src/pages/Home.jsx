@@ -1,7 +1,7 @@
-import Header from "../components/HomePage/Header";
-import Section from "../components/HomePage/Section";
-import SectionLg from "../components/HomePage/SectionLg";
-import SectionList from "../components/HomePage/SectionList";
+import Header from "../components/Header";
+import Section from "../components/Section";
+import SectionLg from "../components/SectionLg";
+import SectionList from "../components/SectionList";
 
 const Home = () => {
   return (
