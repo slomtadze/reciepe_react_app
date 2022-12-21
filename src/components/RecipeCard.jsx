@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import img from "../assets/christmas.jpg";
 
 import {
@@ -8,16 +9,27 @@ import {
 } from "react-icons/ai";
 
 const RecipeCard = () => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
   return (
     <div className="bg-white min-h-min">
       <div className="relative">
         <img src={img} alt="christmas" />
         <div className="absolute top-1 right-1 text p-[12px] rounded-full bg-orange-400">
-           <AiOutlineHeart className="text-white text-xl" /> 
+          {isFavorite ? (
+            <AiFillHeart
+              className="text-white text-xl cursor-pointer"
+              onClick={() => setIsFavorite(!isFavorite)}
+            />
+          ) : (
+            <AiOutlineHeart
+              className="text-white text-xl cursor-pointer"
+              onClick={() => setIsFavorite(!isFavorite)}
+            />
+          )}
         </div>
-        
       </div>
-      <div className="px-2 py-4">
+      <div className="px-2 py-4 cursor-pointer">
         <p className="text-gray-500 uppercase text-sm font-medium mb-2">
           appetizers and snacks
         </p>
