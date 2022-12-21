@@ -1,7 +1,7 @@
 import React from "react";
 import SectionCard from "./SectionCard";
-import useHttp from "../../hooks/use-Http";
-import { getRndmNumbers } from "../../helpers/getRndmNumbers";
+import useHttp from "../hooks/use-Http";
+import { getRndmNumbers } from "../helpers/getRndmNumbers";
 
 const Section = React.memo(({ urlPath, params, header }) => {
   const { data: recipes, isLoading, error } = useHttp(urlPath, params);

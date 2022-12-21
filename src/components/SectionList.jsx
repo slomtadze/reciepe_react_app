@@ -1,6 +1,6 @@
 import React from "react";
-import useHttp from "../../hooks/use-Http";
-import SectionWrapper from "../../Layout/SectionWrapper";
+import useHttp from "../hooks/use-Http";
+import SectionWrapper from "../Layout/SectionWrapper";
 import SectionListCard from "./SectionListCard";
 
 const SectionList = () => {

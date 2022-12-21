@@ -1,17 +1,16 @@
-import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import RecipeDetails from "./pages/RecipeDetails";
-import List from "./pages/List";
+import Recipes from "./pages/Recipes";
 function App() {
   return (
     <div className="w-full overflow-hidden">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list/:listName" element={<List />} />
+        <Route path="/recipes/:name" element={<Recipes />} />
         <Route path="/:recipeID" element={<RecipeDetails />} />
       </Routes>
       <Footer />
