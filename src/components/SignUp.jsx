@@ -1,4 +1,8 @@
-const SignUp = () => {
+const SignUp = ({ setLogInIsActive }) => {
+  const switchSignHandler = () => {
+    setLogInIsActive((prev) => !prev);
+  };
+
   return (
     <div className="w-full px-4 py-8">
       <h1 className="text-center text-2xl mb-8">Sign Up</h1>
@@ -38,7 +42,13 @@ const SignUp = () => {
       </form>
 
       <p>
-        Have an account? <span className="cursor-pointer hover:text-slate-500">Sign In</span>{" "}
+        Have an account?{" "}
+        <span
+          className="cursor-pointer hover:text-slate-500"
+          onClick={switchSignHandler}
+        >
+          Sign In
+        </span>{" "}
         here
       </p>
     </div>
