@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Button = ({ icon, note }) => {
+const Button = ({ icon, note, path }) => {
   const [noteIsShown, setNoteIsShown] = useState(false);
+  const navigate = useNavigate()
   const showNoteHandler = () => {
     setNoteIsShown(true);
   };
@@ -13,6 +15,7 @@ const Button = ({ icon, note }) => {
       className="relative hover:text-white/80 transition duration-300"
       onMouseEnter={showNoteHandler}
       onMouseLeave={hideNoteHandler}
+      onClick={() => navigate(`/${path}`)}
     >
       {icon}{" "}
       {noteIsShown && (
