@@ -10,8 +10,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/recipes/:name" element={<Recipes />} />
-        <Route path="/:recipeID" element={<RecipeDetails />} />
+        <Route path="/recipes/:type" element={<Recipes />} />
+        <Route path="/recipeDetails/:recipeID" element={<RecipeDetails />} />
       </Routes>
       <Footer />
     </div>

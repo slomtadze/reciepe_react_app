@@ -1,17 +1,22 @@
 import PageWrapper from "../Layout/PageWrapper";
 import RecipeCard from "../components/RecipeCard";
+import { useParams } from "react-router-dom";
 
 const Recipes = () => {
+  const { type } = useParams();
+  
+  {/* Ak unda gavakeTo API-s gamodzaxeba type-s gamoyenebiT  */}
+
   return (
     <PageWrapper>
       <div className="py-8 mb-2">
         <div className="h-96 bg-herro-img bg-cover bg-center" />
       </div>
       <div className="w-3/4 mx-auto">
-        <h2 className="text-center text-lg mb-8 cursor-pointer text-black/80 hover:text-black duration-150">Recipes</h2>
-        <h2 className="text-center text-5xl font-bold mb-4">
-          Holidays and Events
+        <h2 className="text-center text-lg mb-8 cursor-pointer text-black/80 hover:text-black duration-150">
+          Recipes
         </h2>
+        <h2 className="text-center text-5xl font-bold mb-4">{type}</h2>
         <p className="text-center ">
           Celebrate with top-rated holiday cookies, appetizers, and desserts.
           Find the right recipe for any holiday.
