@@ -1,10 +1,11 @@
-const SingIn = ({ setLogInIsActive, setAuthIsShown }) => {
+const SingIn = ({ setLogInIsActive, setAuthIsShown, setLogInIsClicked }) => {
   const switchSignHandler = () => {
     setLogInIsActive((prev) => !prev);
   };
 
   const hideAuthHandler = () => {
     setAuthIsShown(false);
+    setLogInIsClicked(false);
   };
   return (
     <div className="w-full px-20 py-16 animate-in fade-in-0 duration-300">
