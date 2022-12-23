@@ -4,7 +4,7 @@ const SignUp = ({ setLogInIsActive }) => {
   };
 
   return (
-    <div className="w-full px-4 py-8">
+    <div className="w-full px-20 py-8 animate-in fade-in-0 duration-700">
       <h1 className="text-center text-2xl mb-8">Sign Up</h1>
       <form className="flex flex-col mb-4 relative">
         <input

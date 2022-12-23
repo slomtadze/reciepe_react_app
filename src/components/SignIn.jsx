@@ -3,7 +3,7 @@ const SingIn = ({ setLogInIsActive }) => {
     setLogInIsActive((prev) => !prev);
   };
   return (
-    <div className="w-full px-20 py-24">
+    <div className="w-full px-20 py-16 animate-in fade-in-0 duration-300">
       <h1 className="text-center text-2xl mb-8">Sign In</h1>
       <form className="flex flex-col mb-4 relative">
         <input
