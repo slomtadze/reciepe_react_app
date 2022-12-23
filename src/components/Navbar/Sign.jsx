@@ -38,6 +38,7 @@ const Sign = () => {
           <AuthenticationCard
             logInIsClicked={logInIsClicked}
             setAuthIsShown={setAuthIsShown}
+            setLogInIsClicked={setLogInIsClicked}
           />
         </Modal>
       ) : null}

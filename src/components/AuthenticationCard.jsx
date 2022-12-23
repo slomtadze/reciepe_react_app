@@ -3,7 +3,11 @@ import img from "../assets/christmas.jpg";
 import SingIn from "./SignIn";
 import SignUp from "./SignUp";
 
-const AuthenticationCard = ({ logInIsClicked, setAuthIsShown }) => {
+const AuthenticationCard = ({
+  logInIsClicked,
+  setAuthIsShown,
+  setLogInIsClicked,
+}) => {
   const [logInIsActive, setLogInIsActive] = useState(false);
 
   useEffect(() => {
@@ -18,6 +22,7 @@ const AuthenticationCard = ({ logInIsClicked, setAuthIsShown }) => {
         <SingIn
           setLogInIsActive={setLogInIsActive}
           setAuthIsShown={setAuthIsShown}
+          setLogInIsClicked={setLogInIsClicked}
         />
       ) : (
         <div className="bg-mexican-img bg-center bg-cover animate-in slide-in-from-right duration-500 rounded-l-lg"></div>
