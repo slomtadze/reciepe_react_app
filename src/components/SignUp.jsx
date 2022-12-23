@@ -1,8 +1,11 @@
-const SignUp = ({ setLogInIsActive }) => {
+const SignUp = ({ setLogInIsActive, setAuthIsShown }) => {
   const switchSignHandler = () => {
     setLogInIsActive((prev) => !prev);
   };
 
+  const hideAuthHandler = () => {
+    setAuthIsShown(false);
+  };
   return (
     <div className="w-full px-20 py-8 animate-in fade-in-0 duration-700">
       <h1 className="text-center text-2xl mb-8">Sign Up</h1>
@@ -35,6 +38,7 @@ const SignUp = ({ setLogInIsActive }) => {
           <button
             className="bg-emerald-600 py-[0.3em] px-[1em] rounded-lg hover:bg-emerald-500 duration-150"
             type="button"
+            onClick={hideAuthHandler}
           >
             Cancel
           </button>
